@@ -1,0 +1,939 @@
+{% extends "master/master.html" %}
+{% load static %}
+
+{% block extra_header %}
+
+<style>
+    .service_icon{
+        background-color: white;
+        padding: 8px;
+    }
+</style>
+
+{% endblock extra_header %}
+
+{% block image_slider %}
+
+{% include "include/image_slider.html" %}
+
+{% endblock image_slider %}
+
+{% block content %}
+
+<!-- Icon box Start --> 
+<section class="pbmit-bg-color-light">
+    <div class="container">
+        <div class="ihbox-bg-three active-onhover">
+            <div class="row g-0">
+
+                {% for service in first_four_service_list %}
+                <article class="pbmit-service-style-4 col-md-6 col-lg-3">
+                    <div class="pbminfotech-post-item">
+                        <div class="pbminfotech-box-content">
+                            <div class="pbminfotech-box-content-inner">
+                                <div class="pbmit-service-icon-wrapper">
+                                    <img src="{% static 'images/svg_icons/' %}{{service.svg_icon}}" class="img-fluid w-100 rounded service_icon" alt="">
+                                </div>
+                                <h3 class="pbmit-service-title">
+                                    <a href="{% url 'main:service_detail' service.id %}">{{service.title}}</a>
+                                </h3>
+                                <div class="pbmit-service-content">
+                                    
+                                </div>
+                                <div class="pbmit-service-btn">
+                                    <a class="btn-arrow" href="{% url 'main:service_detail' service.id %}"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+
+            </div>
+        </div>
+
+        
+        <div class="">
+            <div class="row g-0">
+                
+                {% for service in last_four_service_list %}
+                <article class="pbmit-service-style-4 col-md-6 col-lg-3">
+                    <div class="pbminfotech-post-item">
+                        <div class="pbminfotech-box-content">
+                            <div class="pbminfotech-box-content-inner">
+                                <div class="pbmit-service-icon-wrapper">
+                                    <img src="{% static 'images/svg_icons/' %}{{service.svg_icon}}" class="img-fluid w-100 rounded service_icon" alt="">
+                                </div>
+                                <h3 class="pbmit-service-title">
+                                    <a href="{% url 'main:service_detail' service.id %}">{{service.title}}</a>
+                                </h3>
+                                <div class="pbmit-service-content">
+                                    
+                                </div>
+                                <div class="pbmit-service-btn">
+                                    <a class="btn-arrow" href="{% url 'main:service_detail' service.id %}"><span>Read More</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Icon box End -->
+
+<!-- About Start --> 
+<section class="about-bg-three">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-12 col-xl-6">
+                <div class="about-left">
+                    <div class="pbmit-heading-subheading text-light">
+                        <h4 class="pbmit-subtitle">ABOUT SAVIJO GEO-ENGINEERING CO.LTD</h4>
+                        <h2 class="pbmit-title">INTRODUCTION <br/>COMPANY BACKGROUND</h2>
+                    </div>
+                    <div class="pbmit-heading-desc" style="text-align:justify">
+                    Savijo Geo-Engineering Company Limited is a Tanzania registered private company founded in 2021.
+                        Currently, Office is located at Kibugumo - Kigamboni, near Kibugumo Dispensary, Dar es salaam, Tanzania.
+                        The aim of the company is providing consulting services to the fields of geotechnics, mining, geology, survey,
+                        environment, water resources, waste management, construction and Oil &amp; Gas.
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="pbmit-ihbox pbmit-ihbox-style-11">
+                                <div class="pbmit-ihbox-box d-flex align-items-center">
+                                    <div class="pbmit-ihbox-icon">
+                                        <div class="pbmit-ihbox-icon-wrapper"></div>
+                                    </div>
+                                    <div class="pbmit-ihbox-contents">
+                                        <h2 class="pbmit-element-title">Our Mission</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pbmit-heading-desc" style="text-align:justify">
+                            To provide professionally high quality and efficient technical services to the mining,
+                                energy, hydro and engineering construction industries, fostering a safe, healthy and environmentally
+                                friendly working environment that contributes effectively to the sustainable development of the entire mining,
+                                energy and construction industries.
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="pbmit-ihbox pbmit-ihbox-style-11">
+                                <div class="pbmit-ihbox-box d-flex align-items-center">
+                                    <div class="pbmit-ihbox-icon">
+                                        <div class="pbmit-ihbox-icon-wrapper"></div>
+                                    </div>
+                                    <div class="pbmit-ihbox-contents">
+                                        <h2 class="pbmit-element-title">Our Vision</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pbmit-heading-desc" style="text-align:justify">
+                                To be recognised as the best company in the provision of specialised expert
+                                advice and solutions in the fields of geotechnics, mining, geology, survey, 
+                                environment, water resources, waste management and Oil & Gas in Tanzania and internationally..
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xl-6">
+                <div class="about-us-img-one">
+                    <img src="{% static 'images/homepage-3/img-01-new.jpg' %}" class="img-fluid w-100" alt="">
+                    {% comment %} <div class="button-wrapper">
+                        <a href="#" class="button-link">
+                            <span class="button-content-wrapper">
+                                <span class="button-icon">
+                                    <i aria-hidden="true" class="fa fa-youtube-play"></i>
+                                </span>
+                                <span class="button-text">See Our Industry</span>
+                            </span>
+                        </a>
+                    </div> {% endcomment %}
+                </div>
+            </div> 
+        </div>
+    </div>
+</section>
+<!-- About End -->
+
+<!-- Service Start --> 
+<section class="service-section-three">
+    <div class="container g-0">
+        <div class="row">
+            <div class="col-lg-12 col-xl-5">
+                <div class="service-three-img">
+                    <div class="pbminfotech-ele-fid-style-4">
+                        <div class="pbmit-fld-contents">
+                        <div class="pbmit-circle-outer" data-id="200" data-digit="100" data-fill="#fc0012" data-emptyfill="#fff" data-before="" data-after="<sup>%</sup>" data-thickness="10">
+                            <div class="pbmit-circle">
+                                <h4 class="pbmit-fid-inner">
+                                    <span class="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="100" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">100</span><span class="pbmit-fid-sub"><sup>%</sup></span>
+                                </h4>
+                            </div>
+                            <div class="pbmit-circle-inner">
+                                <h3 class="pbmit-fid-title">Providing quality</h3>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xl-6">
+                <div class="service-content">
+                    <div class="pbmit-heading-subheading text-global">
+                        <h4 class="pbmit-subtitle">OUR GOALS</h4>
+                    </div>
+                    <div class="row">
+                        <ul class="icon-list-items col-md-12">
+                            <li class="list-group-item" style="text-align: justify;">
+                                <i aria-hidden="true" class="fa fa-check-circle"></i>To provide solution to geotechnical problems assocciated with mining,
+                                construction and other projects that require geotechnical expert advice at any level.
+                            </li>
+                            
+                            <li class="list-group-item" style="text-align: justify;">
+                                <i aria-hidden="true" class="fa fa-check-circle"></i>To provide consulting services to the mineral,
+                                energy and engineering construction sectors of the economy. Specifically focus on initial mineral
+                                and fossil fuels prospecting and exploration, mines and project development, mining operation and closure
+                                phases, and rehabilitation of disturbed areas. For the construction industry, services assocciated with
+                                site investigation, geotechnical, hydrological and hydro-geological investigations.
+                            </li>
+
+                            <li class="list-group-item" style="text-align: justify;">
+                                <i aria-hidden="true" class="fa fa-check-circle"></i>To serve the small, medium and large scale mine sectors of the industry,
+                                through the conduct of technological safe, efficient, and environmentally sound practices.
+                            </li>
+
+                            <li class="list-group-item" style="text-align: justify;">
+                                <i aria-hidden="true" class="fa fa-check-circle"></i>To provide training in aspects of safety, health and environment
+                                in mine for safe mining and project continuity.
+                            </li>
+                            
+                            <li class="list-group-item" style="text-align: justify;">
+                                <i aria-hidden="true" class="fa fa-check-circle"></i>To provide training in the field of Geotechnics, Mining, Geology, Survey,
+                                Environment, Water resources, Construction and Oil and Gas. Consultation in company and dispatch management.
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Service End --> 
+
+{% comment %} <!-- Counter Start --> 
+<section class="section-xt">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xl-3 pbmit-fid-style-2 ">
+                <div class="pbminfotech-ele-fid-style-2">
+                    <div class="pbmit-fld-contents">
+                        <div class="pbmit-fld-wrap d-flex align-items-center">
+                            <div class="pbmit-sbox-icon-wrapper">
+                                <i class="pbmit-industrey-icon pbmit-industrey-icon-oil-industry"></i>
+                            </div>
+                            <h4 class="pbmit-fid-inner">
+                                <span class="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="6154" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">6154</span>
+                                <span class="pbmit-fid"></span>
+                            </h4>
+                        </div>
+                        <div class="pbmit-fid-title">
+                            <span>Project Completed Last 5 years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 pbmit-fid-style-2 ">
+                <div class="pbminfotech-ele-fid-style-2">
+                    <div class="pbmit-fld-contents">
+                        <div class="pbmit-fld-wrap d-flex align-items-center">
+                            <div class="pbmit-sbox-icon-wrapper">
+                                <i class="pbmit-industrey-icon pbmit-industrey-icon-world"></i>
+                            </div>
+                            <h4 class="pbmit-fid-inner">
+                                <span class="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="1124" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">1124</span>
+                                <span class="pbmit-fid"></span>
+                            </h4>
+                        </div>
+                        <div class="pbmit-fid-title">
+                            <span>Great Experienced Team member</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 pbmit-fid-style-2 ">
+                <div class="pbminfotech-ele-fid-style-2">
+                    <div class="pbmit-fld-contents">
+                        <div class="pbmit-fld-wrap d-flex align-items-center">
+                            <div class="pbmit-sbox-icon-wrapper">
+                                <i class="pbmit-industrey-icon pbmit-industrey-icon-certificate"></i>
+                            </div>
+                            <h4 class="pbmit-fid-inner">
+                                <span class="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="15" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">15</span>
+                                <span class="pbmit-fid"></span>
+                            </h4>
+                        </div>
+                        <div class="pbmit-fid-title">
+                            <span>Clients Worldwide in 10 Years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 pbmit-fid-style-2 ">
+                <div class="pbminfotech-ele-fid-style-2">
+                    <div class="pbmit-fld-contents">
+                        <div class="pbmit-fld-wrap d-flex align-items-center">
+                            <div class="pbmit-sbox-icon-wrapper">
+                                <i class="pbmit-industrey-icon pbmit-industrey-icon-professional"></i>
+                            </div>
+                            <h4 class="pbmit-fid-inner">
+                                <span class="pbmit-number-rotate numinate" data-appear-animation="animateDigits" data-from="0" data-to="236" data-interval="5" data-before="" data-before-style="" data-after="" data-after-style="">236</span>
+                                <span class="pbmit-fid"></span>
+                            </h4>
+                        </div>
+                        <div class="pbmit-fid-title">
+                            <span>Winning Universal Five Awards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Counter End --> {% endcomment %}
+
+<!-- Portfolio Start -->
+<section class=" portfolio-ihbox">
+    <div class="container-fluid g-0">
+        <div class="pbmit-heading-subheading text-center">
+            <h4 class="pbmit-subtitle">RECENT PROJECT'S</h4>
+            <h2 class="pbmit-title">Some of our finished projects that will <br> amaze your industry</h2>
+        </div>
+        <div class="swiper-slider" data-autoplay="false" data-loop="true" data-dots="true" data-arrows="false" data-columns="4" data-margin="30" data-effect="slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- Slide1 -->
+                    <article class="pbmit-portfolio-style-1 Construction">
+                        <div class="pbminfotech-post-content">
+                            <div class="pbmit-portfolio-img-wrapper">
+                                <div class="pbmit-featured-wrapper">
+                                    <img src="{% static 'images/homepage-1/portfolio/project-new-01.jpg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="pbminfotech-icon-box pbminfotech-media-link">
+                                    <a class="pbmit-lightbox" title="Building Construction Project" href="{% static 'images/homepage-1/portfolio/project-new-01.jpg' %}">
+                                        <i class="pbmit-base-icon-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pbminfotech-box-content">
+                                <div class="pbminfotech-titlebox">
+                                    <h6 class="pbmit-port-cat">
+                                        <a href="javascript:void(0);" rel="tag">Completed - 2021</a>
+                                    </h6>
+                                    <small>CLIENT: MATONGO GOLD MINE, NYAMONGO – TARIME – TANZANIA.</small>
+                                    <h3 class="pbmit-portfolio-title">
+                                        <a href="javascript:void(0);">Dewatering boreholes project for the Underground Mine to reduce water pressure into the mine drives.</a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <!-- Slide1 -->
+                    <article class="pbmit-portfolio-style-1 Construction">
+                        <div class="pbminfotech-post-content">
+                            <div class="pbmit-portfolio-img-wrapper">
+                                <div class="pbmit-featured-wrapper">
+                                    <img src="{% static 'images/homepage-1/portfolio/project-new-02.jpg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="pbminfotech-icon-box pbminfotech-media-link">
+                                    <a class="pbmit-lightbox" title="Building Construction Project" href="{% static 'images/homepage-1/portfolio/project-new-02.jpg' %}">
+                                        <i class="pbmit-base-icon-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pbminfotech-box-content">
+                                <div class="pbminfotech-titlebox">
+                                    <h6 class="pbmit-port-cat">
+                                        <a href="javascript:void(0);" rel="tag">Completed - 2022</a>
+                                    </h6>
+                                    <small>CLIENT: AURELIUS RESOURCES INC, CHUNYA – MBEYA – TANZANIA.</small>
+                                    <h3 class="pbmit-portfolio-title">
+                                        <a href="javascript:void(0);">
+                                            RC Drilling project for exploration works as part of due diligence for business purpose.
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="swiper-slide">
+                    <!-- Slide1 -->
+                    <article class="pbmit-portfolio-style-1 Construction">
+                        <div class="pbminfotech-post-content">
+                            <div class="pbmit-portfolio-img-wrapper">
+                                <div class="pbmit-featured-wrapper">
+                                    <img src="{% static 'images/homepage-1/portfolio/project-new-03.jpg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="pbminfotech-icon-box pbminfotech-media-link">
+                                    <a class="pbmit-lightbox" title="Building Construction Project" href="{% static 'images/homepage-1/portfolio/project-new-03.jpg' %}">
+                                        <i class="pbmit-base-icon-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pbminfotech-box-content">
+                                <div class="pbminfotech-titlebox">
+                                    <h6 class="pbmit-port-cat">
+                                        <a href="javascript:void(0);" rel="tag">Completed - 2022</a>
+                                    </h6>
+                                    <small>CLIENT: NEHAR EDEN CORP LTD, CHUNYA – MBEYA – TANZANIA.</small>
+                                    <h3 class="pbmit-portfolio-title">
+                                        <a href="javascript:void(0);">
+                                            Detailed Geological mapping and Geological map drawing.
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <!-- Slide1 -->
+                    <article class="pbmit-portfolio-style-1 Construction">
+                        <div class="pbminfotech-post-content">
+                            <div class="pbmit-portfolio-img-wrapper">
+                                <div class="pbmit-featured-wrapper">
+                                    <img src="{% static 'images/homepage-1/portfolio/project-new-04.jpg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="pbminfotech-icon-box pbminfotech-media-link">
+                                    <a class="pbmit-lightbox" title="Building Construction Project" href="{% static 'images/homepage-1/portfolio/project-new-04.jpg' %}">
+                                        <i class="pbmit-base-icon-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pbminfotech-box-content">
+                                <div class="pbminfotech-titlebox">
+                                    <h6 class="pbmit-port-cat">
+                                        <a href="javascript:void(0);" rel="tag">Completed - 2022</a>
+                                    </h6>
+                                    <small>CLIENT: AURELIUS RESOURCES INC, CHUNYA – MBEYA – TANZANIA.</small>
+                                    <h3 class="pbmit-portfolio-title">
+                                        <a href="javascript:void(0);">
+                                            Detailed Geological mapping and Geological map drawing.
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <!-- Slide1 -->
+                    <article class="pbmit-portfolio-style-1 Construction">
+                        <div class="pbminfotech-post-content">
+                            <div class="pbmit-portfolio-img-wrapper">
+                                <div class="pbmit-featured-wrapper">
+                                    <img src="{% static 'images/homepage-1/portfolio/project-new-05.jpg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="pbminfotech-icon-box pbminfotech-media-link">
+                                    <a class="pbmit-lightbox" title="Building Construction Project" href="{% static 'images/homepage-1/portfolio/project-new-05.jpg' %}">
+                                        <i class="pbmit-base-icon-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pbminfotech-box-content">
+                                <div class="pbminfotech-titlebox">
+                                    <h6 class="pbmit-port-cat">
+                                        <a href="javascript:void(0);" rel="tag">Completed - 2022</a>
+                                    </h6>
+                                    <small>CLIENT: TEAMONE COMPANY LTD, ILALA – DSM – TANZANIA.</small>
+                                    <h3 class="pbmit-portfolio-title">
+                                        <a href="javascript:void(0);">
+                                            Detailed Geological mapping and Geological map drawing. Comodity: Coal
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="swiper-slide">
+                    <!-- Slide1 -->
+                    <article class="pbmit-portfolio-style-1 Construction">
+                        <div class="pbminfotech-post-content">
+                            <div class="pbmit-portfolio-img-wrapper">
+                                <div class="pbmit-featured-wrapper">
+                                    <img src="{% static 'images/homepage-1/portfolio/project-new-06.jpg' %}" class="img-fluid" alt="">
+                                </div>
+                                <div class="pbminfotech-icon-box pbminfotech-media-link">
+                                    <a class="pbmit-lightbox" title="Building Construction Project" href="{% static 'images/homepage-1/portfolio/project-new-06.jpg' %}">
+                                        <i class="pbmit-base-icon-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pbminfotech-box-content">
+                                <div class="pbminfotech-titlebox">
+                                    <h6 class="pbmit-port-cat">
+                                        <a href="javascript:void(0);" rel="tag">Completed - 2022</a>
+                                    </h6>
+                                    <small>CLIENT: IN&amp;OUT COMPANY LTD, ILALA – DSM – TANZANIA.</small>
+                                    <h3 class="pbmit-portfolio-title">
+                                        <a href="javascript:void(0);">
+                                            Detailed Geological mapping and Geological map drawing. Commodity: Graphite
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+            </div>
+            <div class="pbmit-ihbox pbmit-ihbox-style-3">
+                <div class="pbmit-ihbox-box">
+                    
+                </div>
+             </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio End -->
+
+{% comment %} <!-- Testimonial Start -->
+<section class="testimonial-bg-three">
+    <div class="container">
+        <div class="swiper-slider" data-loop="true"  data-autoplay="false" data-dots="false" data-arrows="true" data-columns="1" data-margin="30" data-effect="slide">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- Slide1 -->
+                    <article class="pbmit-testimonial-style-3">
+                        <div class="pbminfotech-post-item">
+                            <div class="pbminfotech-box-content">
+                                <div class="pbminfotech-testimonial-wrapper">
+                                    <div class="pbminfotech-box-desc">
+                                        <blockquote class="pbminfotech-testimonial-text">
+                                        <p>“ After being forced to move twice within five years, our customers had a hard time finding us and our sales plummeted. The Trydus Co. not only revitalized our brand, but saved our nearly 100-year-old family business from the brink of ruin.”</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="pbminfotech-box-img d-flex justify-content-center align-items-center">
+                                    <div class="pbminfotech-box-author">
+                                        <h3 class="pbminfotech-box-title">Rick Jason</h3>
+                                        <div class="pbminfotech-testimonial-detail">Manager</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <!-- Slide2 -->
+                    <article class="pbmit-testimonial-style-3">
+                        <div class="pbminfotech-post-item">
+                            <div class="pbminfotech-box-content">
+                                <div class="pbminfotech-testimonial-wrapper">
+                                    <div class="pbminfotech-box-desc">
+                                        <blockquote class="pbminfotech-testimonial-text">
+                                        <p>“ After being forced to move twice within five years, our customers had a hard time finding us and our sales plummeted. The Trydus Co. not only revitalized our brand, but saved our nearly 100-year-old family business from the brink of ruin.”</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="pbminfotech-box-img d-flex justify-content-center align-items-center">
+                                    <div class="pbminfotech-box-author">
+                                        <h3 class="pbminfotech-box-title">Cheryl Dunye</h3>
+                                        <div class="pbminfotech-testimonial-detail">Managing Director</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="swiper-slide">
+                    <!-- Slide3 -->
+                    <article class="pbmit-testimonial-style-3">
+                        <div class="pbminfotech-post-item">
+                            <div class="pbminfotech-box-content">
+                                <div class="pbminfotech-testimonial-wrapper">
+                                    <div class="pbminfotech-box-desc">
+                                        <blockquote class="pbminfotech-testimonial-text">
+                                        <p>“ After being forced to move twice within five years, our customers had a hard time finding us and our sales plummeted. The Trydus Co. not only revitalized our brand, but saved our nearly 100-year-old family business from the brink of ruin.”</p>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="pbminfotech-box-img d-flex justify-content-center align-items-center">
+                                    <div class="pbminfotech-box-author">
+                                        <h3 class="pbminfotech-box-title">Amanda Pryor</h3>
+                                        <div class="pbminfotech-testimonial-detail">Manager</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial End --> {% endcomment %}
+
+{% comment %} <!-- Client Start -->
+<section class="client-bg-three">
+    <div class="container g-0">
+        <div class="client-section-three">
+            <div class="row align-items-center"> 
+                <div class="col-md-4">
+                    <div class="client-ihbox">
+                        <div class="pbmit-ihbox pbmit-ihbox-style-2">
+                            <div class="pbmit-ihbox-box">
+                                <div class="pbmit-ihbox-headingicon"></div>
+                                <div class="pbmit-ihbox-contents">
+                                    <h2 class="pbmit-element-title"> We have worked with <br>some awesome brands.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="swiper-slider pbmit-client-light" data-autoplay="false" data-dots="false" data-arrows="false" data-columns="4" data-margin="30" data-effect="slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!-- Slide1 -->
+                                <article class="pbmit-client-style-1 white">
+                                    <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
+                                       <h4 class="pbmit-hide">client 06</h4>
+                                       <div class="pbmit-client-hover-img">
+                                            <img src="{% static 'images/homepage-1/client/client-06.png' %}"  alt="">
+                                        </div>
+                                        <div class="pbmit-featured-wrapper">
+                                            <img src="{% static 'images/homepage-1/client/client-white-06.png' %}" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- Slide2 -->
+                                <article class="pbmit-client-style-1 white">
+                                    <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
+                                       <h4 class="pbmit-hide">client 05</h4>
+                                       <div class="pbmit-client-hover-img">
+                                            <img src="{% static 'images/homepage-1/client/client-05.png' %}"  alt="">
+                                        </div>
+                                        <div class="pbmit-featured-wrapper">
+                                            <img src="{% static 'images/homepage-1/client/client-white-05.png' %}" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- Slide3 -->
+                                <article class="pbmit-client-style-1 white">
+                                    <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
+                                       <h4 class="pbmit-hide">client 04</h4>
+                                       <div class="pbmit-client-hover-img">
+                                            <img src="{% static 'images/homepage-1/client/client-04.png' %}"  alt="">
+                                        </div>
+                                        <div class="pbmit-featured-wrapper">
+                                            <img src="{% static 'images/homepage-1/client/client-white-04.png' %}" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- Slide4 -->
+                                <article class="pbmit-client-style-1 white">
+                                    <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
+                                       <h4 class="pbmit-hide">client 03</h4>
+                                       <div class="pbmit-client-hover-img">
+                                            <img src="{% static 'images/homepage-1/client/client-03.png' %}"  alt="">
+                                        </div>
+                                        <div class="pbmit-featured-wrapper">
+                                            <img src="{% static 'images/homepage-1/client/client-white-03.png' %}" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- Slide5 -->
+                                <article class="pbmit-client-style-1 white">
+                                    <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
+                                       <h4 class="pbmit-hide">client 02</h4>
+                                       <div class="pbmit-client-hover-img">
+                                            <img src="{% static 'images/homepage-1/client/client-02.png' %}"  alt="">
+                                        </div>
+                                        <div class="pbmit-featured-wrapper">
+                                            <img src="{% static 'images/homepage-1/client/client-white-02.png' %}" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- Slide6 -->
+                                <article class="pbmit-client-style-1 white">
+                                    <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
+                                       <h4 class="pbmit-hide">client 01</h4>
+                                       <div class="pbmit-client-hover-img">
+                                            <img src="{% static 'images/homepage-1/client/client-01.png' %}"  alt="">
+                                        </div>
+                                        <div class="pbmit-featured-wrapper">
+                                            <img src="{% static 'images/homepage-1/client/client-white-01.png' %}" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Client End --> {% endcomment %}
+
+<!-- Appoinment Start -->
+<section class="appoinment-bg-one appoinment-bg-three" style="padding-bottom: 20px;">
+    <div class="container g-0 pbmit-col-stretched-yes pbmit-col-right"> 
+        <div class="row g-0">
+            <div class="col-md-6">
+                <div class="appoinment-single">
+                    <div class="appoinment-content">
+                        <div class="pbmit-heading-subheading text-light">
+                            <h4 class="pbmit-subtitle">DO YOU NEEDS ANY HELP?</h4>
+                            <h2 class="pbmit-title">Frequently Asked Questions</h2>
+                        </div>
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item active">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    IN MY FINANCIAL MARKETING LOSS CAN I GET INSUARANCE ?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Our country possesses approximately 170 billion barrels of oil that can be recovered with today’s technology. Of that number, 165 billion barrels are located in the oil sands.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    CAN YOU EXPLAIN WHAT ARE THE STEPS OF MARKETING RESEARCH?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" 
+                                data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Our country possesses approximately 170 billion barrels of oil that can be recovered with today’s technology. Of that number, 165 billion barrels are located in the oil sands.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    HOW I CAN CONTACT WITH YOUR ADVISOR IN STRATEGIC ISSUE?
+                                    </button>
+                                </h2> 
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" 
+                                data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Our country possesses approximately 170 billion barrels of oil that can be recovered with today’s technology. Of that number, 165 billion barrels are located in the oil sands.
+                                    </div>
+                                </div>                         
+                            </div>    
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingfour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                    CAN YOU PROVIDE TIPS FOR INVEST MONEY IN STOCK MARKET?
+                                    </button>
+                                </h2> 
+                                <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" 
+                                data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Our country possesses approximately 170 billion barrels of oil that can be recovered with today’s technology. Of that number, 165 billion barrels are located in the oil sands.
+                                    </div>
+                                </div>                         
+                            </div>                           
+                        </div>
+                        <a href="#" class="pbmit-btn pbmit-btn-shape-round pbmit-btn-inline">
+                            <span>Ask question more </span>
+                        </a>
+                    </div>
+                </div>									
+            </div>
+            <div class="col-md-6">
+                <div class="appoinment-form">
+                    <div class="pbmit-heading-subheading text-white">
+                        <h4 class="pbmit-subtitle">CONATCT US</h4>
+                        <h2 class="pbmit-title">Request a call back</h2>
+                    </div>
+                    <div class="pbmit-heading-desc">Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan lacus vel facilisis.</div>
+                    <form class="form-style-1">
+                        <div class="row"> 
+                            <div class="col-sm-6">
+                                <input type="text" name="your-name" class="form-control" placeholder="Your name">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="email" name="Email address" class="form-control" placeholder="Email address">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" name="your-email" class="form-control" placeholder="Your Number">
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="input-group">
+                                    <select class="form-select" id="inputGroupSelect01">
+                                      <option selected>Select Industry Services</option>
+                                      <option value="1">Manufacturing</option>
+                                      <option value="2">Construction</option>
+                                      <option value="3">Energy</option>
+                                    </select>
+                                  </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <textarea name="message" class="form-control" placeholder="Write here message"></textarea>
+                            </div>
+                            <div class="col-sm-12">
+                                <button type="submit" class="pbmit-btn pbmit-btn-shape-round pbmit-btn-blackish">
+                                    <span>Request an Estimate</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Appoinment End -->
+
+{% comment %} <!-- Blog Start -->
+<section class="section-xxl">
+       <div class="container">
+        <div class="pbmit-heading-subheading text-center">
+            <h4 class="pbmit-subtitle">OUR LATEST NEWS</h4>
+            <h2 class="pbmit-title">What's going on in our blog?</h2>
+        </div>
+        <div class="row pbmit-blog-style">
+            <article class="pbmit-blog-style-3 col-xl-4 col-md-6">
+                <div class="post-item">
+                    <div class="pbmit-featured-container">
+                        <div class="pbmit-featured-wrapper">
+                            <img src="{% static 'images/homepage-3/blog/blog-new-01.jpg' %}" class="image" alt="">
+                        </div>
+                        <div class="pbmit-meta-date-wrapper">
+                            <span class="pbmit-post-date">29</span>
+                            <span class="pbmit-post-month-year">Jun</span>
+                        </div>
+                    </div>
+                    <div class="pbminfotech-box-content">
+                        <div class="pbmit-meta-container">
+                            <div class="pbmit-meta-author-wrapper pbmit-meta-line">
+                                <a href="#" title="Posted admin" rel="author"> admin</a>
+                            </div>
+                            <div class="pbmit-meta-comment-wrapper pbmit-meta-line">
+                                <div class="pbmit-meta-category">
+                                    <div class="pbmit-comment-wrapper">
+                                        <span class="pbmit-meta pbmit-meta-comments">3
+                                            <span class="pbmit-meta pbmit-comments-hide">Comments</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="pbmit-post-title">
+                            <a href="blog-single-details.html">We provide Asset Management and Monitoring System</a>
+                        </h3>
+                    </div>
+                </div>
+            </article>
+            <article class="pbmit-blog-style-3 col-xl-4 col-md-6">
+                <div class="post-item">
+                    <div class="pbmit-featured-container">
+                        <div class="pbmit-featured-wrapper">
+                            <img src="{% static 'images/homepage-3/blog/blog-new-02.jpg' %}" class="image" alt="">
+                        </div>
+                        <div class="pbmit-meta-date-wrapper">
+                            <span class="pbmit-post-date">18</span>
+                            <span class="pbmit-post-month-year">Jun</span>
+                        </div>
+                    </div>
+                    <div class="pbminfotech-box-content">
+                        <div class="pbmit-meta-container">
+                            <div class="pbmit-meta-author-wrapper pbmit-meta-line">
+                                <a href="#" title="Posted admin" rel="author"> admin</a>
+                            </div>
+                            <div class="pbmit-meta-comment-wrapper pbmit-meta-line">
+                                <div class="pbmit-meta-category">
+                                    <div class="pbmit-comment-wrapper">
+                                        <span class="pbmit-meta pbmit-meta-comments">3
+                                            <span class="pbmit-meta pbmit-comments-hide">Comments</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="pbmit-post-title">
+                            <a href="blog-single-details.html">MODERN STEEL FOR APPARATUS MIX & FILLING CONSTRUCTION</a>
+                        </h3>
+                    </div>
+                </div>
+            </article>
+            <article class="pbmit-blog-style-3 col-xl-4 col-md-6">
+                <div class="post-item">
+                    <div class="pbmit-featured-container">
+                        <div class="pbmit-featured-wrapper">
+                            <img src="{% static 'images/homepage-3/blog/blog-new-03.jpg' %}" class="image" alt="">
+                        </div>
+                        <div class="pbmit-meta-date-wrapper">
+                            <span class="pbmit-post-date">10</span>
+                            <span class="pbmit-post-month-year">Jun</span>
+                        </div>
+                    </div>
+                    <div class="pbminfotech-box-content">
+                        <div class="pbmit-meta-container">
+                            <div class="pbmit-meta-author-wrapper pbmit-meta-line">
+                                <a href="#" title="Posted admin" rel="author"> admin</a>
+                            </div>
+                            <div class="pbmit-meta-comment-wrapper pbmit-meta-line">
+                                <div class="pbmit-meta-category">
+                                    <div class="pbmit-comment-wrapper">
+                                        <span class="pbmit-meta pbmit-meta-comments">3
+                                            <span class="pbmit-meta pbmit-comments-hide">Comments</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="pbmit-post-title">
+                            <a href="blog-single-details.html">GET THE BEST SOLUTIONS FOR WIND ENERGY SYSTEMS WORK</a>
+                        </h3>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="text-center mt-5">
+            <a href="blog-grid-view.html" class="pbmit-btn pbmit-btn-shape-round pbmit-btn-outline">
+                <span>View All blogs</span>
+            </a>
+        </div>
+       </div>
+</section>
+<!-- Blog End --> {% endcomment %}
+
+{% endblock content %}

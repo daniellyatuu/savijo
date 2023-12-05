@@ -1,0 +1,266 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon6c97.ttf?ad9a54ae51fc0858013b365f391d7322") format("truetype"),
+url("../fonts/flaticon6c97.woff?ad9a54ae51fc0858013b365f391d7322") format("woff"),
+url("../fonts/flaticon6c97.woff2?ad9a54ae51fc0858013b365f391d7322") format("woff2"),
+url("../fonts/flaticon6c97.eot?ad9a54ae51fc0858013b365f391d7322#iefix") format("embedded-opentype"),
+url("../fonts/flaticon6c97.svg?ad9a54ae51fc0858013b365f391d7322#flaticon") format("svg");
+}
+
+i[class^="pbmit-industrey-icon-"]:before, i[class*=" pbmit-industrey-icon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+}
+
+.pbmit-industrey-icon-back:before {
+    content: "\f101";
+}
+.pbmit-industrey-icon-next:before {
+    content: "\f102";
+}
+.pbmit-industrey-icon-conveyor:before {
+    content: "\f103";
+}
+.pbmit-industrey-icon-coal:before {
+    content: "\f104";
+}
+.pbmit-industrey-icon-cosmetic:before {
+    content: "\f105";
+}
+.pbmit-industrey-icon-chemicals:before {
+    content: "\f106";
+}
+.pbmit-industrey-icon-screwdriver:before {
+    content: "\f107";
+}
+.pbmit-industrey-icon-pipe:before {
+    content: "\f108";
+}
+.pbmit-industrey-icon-warehouse:before {
+    content: "\f109";
+}
+.pbmit-industrey-icon-welder:before {
+    content: "\f10a";
+}
+.pbmit-industrey-icon-refinery:before {
+    content: "\f10b";
+}
+.pbmit-industrey-icon-drilling-rig:before {
+    content: "\f10c";
+}
+.pbmit-industrey-icon-gear:before {
+    content: "\f10d";
+}
+.pbmit-industrey-icon-package:before {
+    content: "\f10e";
+}
+.pbmit-industrey-icon-windmill:before {
+    content: "\f10f";
+}
+.pbmit-industrey-icon-industry:before {
+    content: "\f110";
+}
+.pbmit-industrey-icon-hook:before {
+    content: "\f111";
+}
+.pbmit-industrey-icon-meter:before {
+    content: "\f112";
+}
+.pbmit-industrey-icon-tank:before {
+    content: "\f113";
+}
+.pbmit-industrey-icon-security-helmet:before {
+    content: "\f114";
+}
+.pbmit-industrey-icon-factory:before {
+    content: "\f115";
+}
+.pbmit-industrey-icon-packages:before {
+    content: "\f116";
+}
+.pbmit-industrey-icon-wrench:before {
+    content: "\f117";
+}
+.pbmit-industrey-icon-food-industry:before {
+    content: "\f118";
+}
+.pbmit-industrey-icon-waste-water:before {
+    content: "\f119";
+}
+.pbmit-industrey-icon-power-plant:before {
+    content: "\f11a";
+}
+.pbmit-industrey-icon-plug:before {
+    content: "\f11b";
+}
+.pbmit-industrey-icon-truck:before {
+    content: "\f11c";
+}
+.pbmit-industrey-icon-food-industry-1:before {
+    content: "\f11d";
+}
+.pbmit-industrey-icon-forklift:before {
+    content: "\f11e";
+}
+.pbmit-industrey-icon-construction-worker:before {
+    content: "\f11f";
+}
+.pbmit-industrey-icon-vest:before {
+    content: "\f120";
+}
+.pbmit-industrey-icon-control-panel:before {
+    content: "\f121";
+}
+.pbmit-industrey-icon-cargo-ship:before {
+    content: "\f122";
+}
+.pbmit-industrey-icon-battery:before {
+    content: "\f123";
+}
+.pbmit-industrey-icon-gas-mask:before {
+    content: "\f124";
+}
+.pbmit-industrey-icon-barrel:before {
+    content: "\f125";
+}
+.pbmit-industrey-icon-construction-worker-1:before {
+    content: "\f126";
+}
+.pbmit-industrey-icon-battery-1:before {
+    content: "\f127";
+}
+.pbmit-industrey-icon-industry-1:before {
+    content: "\f128";
+}
+.pbmit-industrey-icon-valve:before {
+    content: "\f129";
+}
+.pbmit-industrey-icon-gloves:before {
+    content: "\f12a";
+}
+.pbmit-industrey-icon-saw:before {
+    content: "\f12b";
+}
+.pbmit-industrey-icon-scissor-lift:before {
+    content: "\f12c";
+}
+.pbmit-industrey-icon-oil-tank:before {
+    content: "\f12d";
+}
+.pbmit-industrey-icon-oil-pump:before {
+    content: "\f12e";
+}
+.pbmit-industrey-icon-factory-1:before {
+    content: "\f12f";
+}
+.pbmit-industrey-icon-container:before {
+    content: "\f130";
+}
+.pbmit-industrey-icon-oil-industry:before {
+    content: "\f131";
+}
+.pbmit-industrey-icon-packages-1:before {
+    content: "\f132";
+}
+.pbmit-industrey-icon-plan:before {
+    content: "\f133";
+}
+.pbmit-industrey-icon-factory-2:before {
+    content: "\f134";
+}
+.pbmit-industrey-icon-loupe:before {
+    content: "\f135";
+}
+.pbmit-industrey-icon-shopping-cart:before {
+    content: "\f136";
+}
+.pbmit-industrey-icon-conveyor-1:before {
+    content: "\f137";
+}
+.pbmit-industrey-icon-factory-3:before {
+    content: "\f138";
+}
+.pbmit-industrey-icon-engineer:before {
+    content: "\f139";
+}
+.pbmit-industrey-icon-valve-1:before {
+    content: "\f13a";
+}
+.pbmit-industrey-icon-barrel-1:before {
+    content: "\f13b";
+}
+.pbmit-industrey-icon-eolic-energy:before {
+    content: "\f13c";
+}
+.pbmit-industrey-icon-helmet:before {
+    content: "\f13d";
+}
+.pbmit-industrey-icon-professional:before {
+    content: "\f13e";
+}
+.pbmit-industrey-icon-forklift-1:before {
+    content: "\f13f";
+}
+.pbmit-industrey-icon-solar-panel:before {
+    content: "\f140";
+}
+.pbmit-industrey-icon-fuel-truck:before {
+    content: "\f141";
+}
+.pbmit-industrey-icon-battery-2:before {
+    content: "\f142";
+}
+.pbmit-industrey-icon-tick:before {
+    content: "\f143";
+}
+.pbmit-industrey-icon-conversation:before {
+    content: "\f144";
+}
+.pbmit-industrey-icon-call:before {
+    content: "\f145";
+}
+.pbmit-industrey-icon-helmet-1:before {
+    content: "\f146";
+}
+.pbmit-industrey-icon-location:before {
+    content: "\f147";
+}
+.pbmit-industrey-icon-send:before {
+    content: "\f148";
+}
+.pbmit-industrey-icon-telephone:before {
+    content: "\f149";
+}
+.pbmit-industrey-icon-world:before {
+    content: "\f14a";
+}
+.pbmit-industrey-icon-time-call:before {
+    content: "\f14b";
+}
+.pbmit-industrey-icon-chat:before {
+    content: "\f14c";
+}
+.pbmit-industrey-icon-email:before {
+    content: "\f14d";
+}
+.pbmit-industrey-icon-mailbox:before {
+    content: "\f14e";
+}
+.pbmit-industrey-icon-guarantee:before {
+    content: "\f14f";
+}
+.pbmit-industrey-icon-plus:before {
+    content: "\f150";
+}
+.pbmit-industrey-icon-medal:before {
+    content: "\f151";
+}
+.pbmit-industrey-icon-certificate:before {
+    content: "\f152";
+}
+.pbmit-industrey-icon-winner:before {
+    content: "\f153";
+}
+.pbmit-industrey-icon-trophy:before {
+    content: "\f154";
+}

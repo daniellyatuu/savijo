@@ -1,0 +1,111 @@
+{% load static %}
+
+{% url "main:home" as home %}
+{% url "main:about_us" as about_us %}
+{% url "main:service_detail" object.id as service_detail %}
+{% url "main:our_service" as our_service %}
+{% url "main:contact_us" as contact_us %}
+{% url "main:team_member" as team_member %}
+
+<div class="pre-header">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="pbmit-pre-header-left">
+                <ul class="pbmit-contact-info">
+                    <li><i class="pbmit-base-icon-phone"></i> Call (+255) 756 844 154</li>
+                    <li><i class="pbmit-base-icon-mail-alt"></i> <a href="javascript:void(0);">savijogeoengineering@gmail.com</a></li>
+                    <li><i class="pbmit-base-icon-pin"></i>Kibugumo Near Kibugumo Dispensary at Efatha Streets</li>
+                </ul>
+            </div>
+            <div class="pbmit-pre-header-right">
+                <ul class="pbmit-social-links">
+                    <li class="pbmit-social-li pbmit-social-facebook">
+                        <a href="#" target="_blank">
+                            <span><i class="pbmit-base-icon-facebook-squared"></i></span>
+                        </a>
+                    </li>
+                    <li class="pbmit-social-li pbmit-social-twitter">
+                        <a href="#" target="_blank">
+                            <span><i class="pbmit-base-icon-twitter"></i></span>
+                        </a>
+                    </li>
+                    <li class="pbmit-social-li pbmit-social-instagram">
+                        <a href="#" target="_blank">
+                            <span><i class="pbmit-base-icon-instagram"></i></span>
+                        </a>
+                    </li>
+                    {% comment %} <li class="pbmit-social-li pbmit-social-youtube">
+                        <a href="#" target="_blank">
+                            <span><i class="pbmit-base-icon-youtube-play"></i></span>
+                        </a>
+                    </li> {% endcomment %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="site-header-menu" style="background-color: white;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="site-branding">
+                        <span class="site-title">
+                            <a href="{% url 'main:home' %}">
+                                <img class="logo-img" src="{% static 'images/homepage-3/savijo_logo.png' %}" alt="Savijo Logo">
+                            </a>
+                        </span>
+                    </div>
+                    <div class="site-navigations">
+                        <nav class="main-menu navbar-expand-xl navbar-light">
+                            <div class="navbar-header">
+                                <!-- Toggle Button --> 
+                                <button class="navbar-toggler" type="button">
+                                    <i class="pbmit-base-icon-menu-1"></i>
+                                </button>
+                            </div>
+                            <div class="pbmit-mobile-menu-bg"></div>
+                            <div class="collapse navbar-collapse clearfix show" id="pbmit-menu">
+                                <div class="pbmit-menu-wrap">
+                                    <span class="closepanel">
+                                        <i class="pbmit-base-icon-cancel"></i>
+                                    </span>
+                                    <ul class="navigation clearfix">
+                                        <li class="{% if request.path == home or request.path == service_detail %}active{% endif %}">
+                                            <a href="{{home}}">Home</a>
+                                        </li>
+
+                                        <li class="{% if request.path == about_us %}active{% endif %}">
+                                            <a href="{{about_us}}">About Us</a>
+                                        </li>
+
+                                        <li class="{% if request.path == our_service %}active{% endif %}">
+                                            <a href="{{our_service}}">Our Service</a>
+                                        </li>
+
+                                        <li class="{% if request.path == contact_us %}active{% endif %}">
+                                            <a href="{{contact_us}}">Contact Us</a>
+                                        </li>
+                                        
+                                        <li class="{% if request.path == team_member %}active{% endif %}">
+                                            <a href="{{team_member}}">Team</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="pbmit-right-side">
+                        
+                        <a href="{{contact_us}}" class="pbmit-btn">
+                            <span>Get a quote</span>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
